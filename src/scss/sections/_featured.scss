@@ -1,0 +1,28 @@
+.featured {
+  height: 100vh;
+  padding: 50px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .left,
+  .right {
+    width: calc(50% - 25px);
+    height: 100%;
+    transition: 0.2s;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      overflow: hidden;
+    }
+
+    // &:hover {
+    //   width: 110%;
+    // }
+  }
+}

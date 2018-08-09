@@ -2,15 +2,42 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Art Will Save Us</title>
+
+    <!-- Stysheets -->
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <title></title>
     <link rel="stylesheet" href="./css/style.css">
+
   </head>
   <body>
-    <div class="hero" style="background: url('./img/ame.jpg')">
+    <section class="hero" style="background-image: url('./img/ame.jpg')">
       <div class="headline">
-        <h1> <a href="#">Art will save us</a> </h1>
+        <h1> <a id="smooth-scroll-1" href="#">Art will save us</a> </h1>
       </div>
-    </div>
+    </section>
+
+    <section class="featured" id="featured">
+      <div class="container">
+        <div class="left">
+          <img src="./img/IMG_9815.jpg" alt="">
+        </div>
+        <div class="right">
+          <img src="./img/IMG_9928.jpg" alt="">
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript">
+      // document.addEventListener("DOMContentLoaded", function() {
+        var smoothScroll = document.getElementById('smooth-scroll-1');
+        smoothScroll.addEventListener("click", function() {
+          event.preventDefault()
+          document.getElementById('featured').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        });
+      // });
+    </script>
   </body>
 </html>
