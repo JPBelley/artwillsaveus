@@ -48,6 +48,13 @@ gulp.task('scripts', function(){
     }))
 });
 
+/* HTML
+**************************/
+gulp.task('html', function() {
+	return gulp.src('src/**/*.html')
+		.pipe(gulp.dest('./dist/'));
+});
+
 /* Image minification
 **************************/
 gulp.task('imagemin', function(){
@@ -61,7 +68,7 @@ gulp.task('imagemin', function(){
 
 /** Watcher to rerun gulp on save
 **************************/
-gulp.task('default', ['browserSync', 'scripts', 'sass', 'imagemin'], function(){
+gulp.task('default', ['browserSync', 'scripts', 'sass', 'imagemin', 'html'], function(){
   gulp.watch(CSS_PATH, ['sass']);
   // Other watchers
   gulp.watch('dist/*.html', browserSync.reload);
@@ -70,7 +77,7 @@ gulp.task('default', ['browserSync', 'scripts', 'sass', 'imagemin'], function(){
 
 /** Watcher to rerun gulp on save
 **************************/
-gulp.task('watch', ['browserSync', 'sass', 'imagemin'], function(){
+gulp.task('watch', ['browserSync', 'sass', 'imagemin', 'html'], function(){
   gulp.watch(CSS_PATH, ['sass']);
   // Other watchers
   gulp.watch('dist/*.html', browserSync.reload);
