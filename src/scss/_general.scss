@@ -41,6 +41,7 @@ h1::before {
   background-color: transparent;
   transition: 0.3s;
   border-left: 1px solid white;
+  pointer-events: none;
 }
 
 h1:hover::before {
@@ -60,6 +61,7 @@ h1::after {
   transition: 0.3s;
   border-bottom: 1px solid white;
   border-right: 1px solid white;
+  pointer-events: none;
 }
 
 h1:hover::after {

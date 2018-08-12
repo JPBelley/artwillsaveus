@@ -19,25 +19,35 @@
 
     <section class="featured" id="featured">
       <div class="container">
-        <div class="left">
+        <div class="box left">
+          <div class="hover">
+            <h2>Full picture</h2>
+            <div class="close">x</div>
+          </div>
           <img src="./img/IMG_9815.jpg" alt="">
         </div>
-        <div class="right">
+        <div class="box right">
+          <div class="hover">
+            <h2>Full picture</h2>
+            <div class="close">x</div>
+          </div>
           <img src="./img/IMG_9928.jpg" alt="">
         </div>
       </div>
     </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
     <script type="text/javascript">
-      // document.addEventListener("DOMContentLoaded", function() {
+      document.addEventListener("DOMContentLoaded", function() {
         var smoothScroll = document.getElementById('smooth-scroll-1');
         smoothScroll.addEventListener("click", function() {
-          event.preventDefault()
+          event.preventDefault();
           document.getElementById('featured').scrollIntoView({
             behavior: 'smooth',
             block: 'start'
           });
         });
-      // });
+      });
     </script>
   </body>
 </html>

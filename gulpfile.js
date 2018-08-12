@@ -32,20 +32,14 @@ gulp.task('sass', function(){
     .pipe(concat('style.css'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist/css/'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
 });
 
 // Javascript
 gulp.task('scripts', function(){
-  return gulp.src('src/js/*.js')
+  return gulp.src(SCRIPTS_PATH)
     .pipe(uglify())
     .pipe(concat('main.js'))
     .pipe(gulp.dest('dist/js'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
 });
 
 /* HTML
@@ -68,19 +62,19 @@ gulp.task('imagemin', function(){
 
 /** Watcher to rerun gulp on save
 **************************/
-gulp.task('default', ['browserSync', 'scripts', 'sass', 'imagemin', 'html'], function(){
+gulp.task('default', ['scripts', 'sass', 'imagemin', 'html'], function(){
   gulp.watch(CSS_PATH, ['sass']);
   // Other watchers
-  gulp.watch('dist/*.html', browserSync.reload);
-  gulp.watch(SCRIPTS_PATH, ['scripts'], browserSync.reload);
+  gulp.watch('dist/*.html');
+  gulp.watch(SCRIPTS_PATH, ['scripts']);
 })
 
 /** Watcher to rerun gulp on save
 **************************/
-gulp.task('watch', ['browserSync', 'sass', 'imagemin', 'html'], function(){
+gulp.task('watch', ['browserSync', 'scripts', 'sass', 'imagemin', 'html'], function(){
   gulp.watch(CSS_PATH, ['sass']);
   // Other watchers
-  gulp.watch('dist/*.html', browserSync.reload);
+  gulp.watch('src/*.html', ['html'], browserSync.reload);
   gulp.watch(SCRIPTS_PATH, ['scripts'], browserSync.reload);
 })
 
