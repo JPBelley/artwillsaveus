@@ -72,7 +72,7 @@ gulp.task('default', ['scripts', 'sass', 'imagemin', 'html'], function(){
 /** Watcher to rerun gulp on save
 **************************/
 gulp.task('watch', ['browserSync', 'scripts', 'sass', 'imagemin', 'html'], function(){
-  gulp.watch(CSS_PATH, ['sass']);
+  gulp.watch(CSS_PATH, ['sass'], browserSync.reload);
   // Other watchers
   gulp.watch('src/*.html', ['html'], browserSync.reload);
   gulp.watch(SCRIPTS_PATH, ['scripts'], browserSync.reload);
