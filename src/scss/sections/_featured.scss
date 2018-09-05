@@ -83,8 +83,10 @@
     }
 
     &:hover .hover {
-      visibility: visible;
-      opacity: 1;
+      @media screen and (min-width: $min-tablet) {
+        visibility: visible;
+        opacity: 1;
+      }
     }
 
     .close {
