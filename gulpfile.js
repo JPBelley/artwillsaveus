@@ -62,10 +62,8 @@ gulp.task('imagemin', function(){
 /** Watcher to rerun gulp on save
 **************************/
 gulp.task('default', ['scripts', 'sass', 'imagemin', 'html'], function(){
-  gulp.watch(CSS_PATH, ['sass']);
-  // Other watchers
-  gulp.watch('dist/*.html');
-  gulp.watch(SCRIPTS_PATH, ['scripts']);
+  console.log('******** Default task done ********');
+
 })
 
 /** Watcher to rerun gulp on save
