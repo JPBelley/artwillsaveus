@@ -13,7 +13,7 @@ let sourcemaps = require('gulp-sourcemaps');
 // let babel = require("gulp-babel");
 
 // File paths
-let SCRIPTS_PATH = ['src/swiper.min.js', 'src/js/**/*.js'];
+let SCRIPTS_PATH = ['src/js/swiper.min.js', 'src/js/**/*.js'];
 let CSS_PATH = 'src/scss/**/*.scss';
 
 // Translate SASS to CSS
@@ -52,7 +52,7 @@ gulp.task('html', function() {
 /* Image minification
 **************************/
 gulp.task('imagemin', function(){
-  var img_src = 'src/img/*';
+  var img_src = 'src/img/**/*';
   var img_dest = './dist/img/';
   return gulp.src(img_src)
   .pipe(imagemin())

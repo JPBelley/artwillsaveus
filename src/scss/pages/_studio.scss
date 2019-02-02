@@ -1,0 +1,62 @@
+#studio {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+
+  .swiper-container,
+  .swiper-wrapper,
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+
+    img {
+      visibility: hidden;
+      opacity: 0;
+      transition: 1s;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    &.swiper-slide-active {
+
+      img {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+#bee {
+  z-index: 110;
+  width: 30px;
+  transition: 0.1s ease-in-out;
+  pointer-events: none;
+
+  svg,
+  img {
+    width: 100%;
+    transition: 0.2s 0;
+  }
+
+  &.menu-open {
+    svg {
+      transition: 0.2s 0.7s;
+      fill: #000;
+    }
+  }
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets {
+  bottom: 20px;
+}
+
+.swiper-pagination-bullet {
+  background-color: $white;
+  width: 10px;
+  height: 10px;
+
+}
