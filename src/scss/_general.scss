@@ -7,16 +7,74 @@
 }
 body,
 html {
-  height: 100vh;
+  height: 1000vh;
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
 }
+
 a {
   text-decoration: none;
   color: $black;
-  transition: 0.2s;
+  font-weight: 400;
+}
 
-  &:hover {
-    color: rgba($black, 0.7);
+h1 {
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 2px;
+  margin-bottom: 10vh;
+  position: relative;
+  font-size: 14px;
+  line-height: 1;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 15vh;
   }
+
+  a {
+    padding: 20px 25px;
+    color: $white;
+    font-weight: 100;
+  }
+}
+
+
+h1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -20px;
+  width: 75px;
+  height: 0;
+  border-top: 1px solid white;
+  background-color: transparent;
+  transition: 0.3s;
+  border-left: 1px solid white;
+  pointer-events: none;
+}
+
+h1:hover::before {
+  width: 0;
+  height: 30px;
+  border-left: 1px solid white;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  width: 75px;
+  height: 0;
+  background-color: transparent;
+  transition: 0.3s;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  pointer-events: none;
+}
+
+h1:hover::after {
+  width: 0;
+  height: 30px;
+  border-right: 1px solid white;
 }

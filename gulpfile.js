@@ -13,7 +13,7 @@ let sourcemaps = require('gulp-sourcemaps');
 // let babel = require("gulp-babel");
 
 // File paths
-let SCRIPTS_PATH = ['src/js/swiper.min.js', 'src/js/**/*.js'];
+let SCRIPTS_PATH = ['src/js/skrollr.min.js', 'src/js/swiper.min.js', 'src/js/**/*.js'];
 let CSS_PATH = 'src/scss/**/*.scss';
 
 // Translate SASS to CSS
