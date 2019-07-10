@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Photo portfolio of JPBelley",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "swiper": "^4.5.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.24.6",
     "gift": "^0.10.2",
