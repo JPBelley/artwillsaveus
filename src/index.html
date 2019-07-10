@@ -12,16 +12,17 @@
 
     <!-- Stysheets -->
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
     <link rel="stylesheet" href="./css/style.css">
-
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127056531-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      // window.dataLayer = window.dataLayer || [];
+      // function gtag(){dataLayer.push(arguments);}
+      // gtag('js', new Date());
 
-      gtag('config', 'UA-127056531-1');
+      // gtag('config', 'UA-127056531-1');
     </script>
 
   </head>
@@ -33,12 +34,33 @@
     </nav>
 
     <!-- Hero Banner -->
-    <section class="hero" style="background-image: url('./img/ame.jpg')">
-      <div class="headline">
-        <div class="overlay"></div>
-        <h1> <a href="#featured">Art will save us</a> </h1>
+    <section class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide hero" style="background-image: url('./img/ame.jpg')">
+          <div class="headline">
+            <div class="overlay"></div>
+            <h1> <a href="#featured">Art will save us</a> </h1>
+          </div>
+        </div>
+        <div class="swiper-slide hero" style="background-image: url('./img/IMG_2769.jpg')">
+          <div class="headline">
+            <div class="overlay"></div>
+            <h1> <a href="#featured">Art will save us</a> </h1>
+          </div>
+        </div>
+        <div class="swiper-slide hero" style="background-image: url('./img/DSC02868.jpg')">
+          <div class="headline">
+            <div class="overlay"></div>
+            <h1> <a href="#featured">Art will save us</a> </h1>
+          </div>
+        </div>
       </div>
+      
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </section>
+
 
     <!-- Featured Section -->
     <section class="featured" id="featured">
@@ -111,6 +133,7 @@
 
     <!-- Scripts  -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
