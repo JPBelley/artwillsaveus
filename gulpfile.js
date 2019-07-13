@@ -3,6 +3,7 @@ let gulp = require('gulp');
 let sass = require('gulp-sass');
 let uglify = require('gulp-uglify');
 let concat = require('gulp-concat');
+let babel = require('gulp-babel');
 let autoprefixer = require('gulp-autoprefixer');
 let browserSync = require('browser-sync').create();
 let imagemin = require('gulp-imagemin');
@@ -37,6 +38,7 @@ gulp.task('sass', function(){
 // Javascript
 gulp.task('scripts', function(){
   return gulp.src(SCRIPTS_PATH)
+    // .pipe(babel({ presets: ['es2015'] }))
     .pipe(uglify())
     .pipe(concat('main.js'))
     .pipe(gulp.dest('dist/js'))
