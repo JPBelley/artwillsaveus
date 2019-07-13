@@ -43,7 +43,7 @@ var swiperOptions = {
           speed + "ms";
         swiper.slides[i].querySelectorAll(".single-square").forEach(function(square) {
           square.style.transition =
-            getRandomArbitrary(0, 1) + "s";
+            getRandomArbitrary(0, 2) + "s";
           square.style.opacity =
             "1";
         });
