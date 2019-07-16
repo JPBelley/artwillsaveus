@@ -6,12 +6,15 @@ var interleaveOffset = 0.5;
 
 var swiperOptions = {
   loop: true,
-  speed: 2000,
+  speed: 3000,
   grabCursor: true,
   watchSlidesProgress: true,
   effect: 'fade',
   mousewheelControl: true,
   keyboardControl: true,
+  autoplay: {
+    delay: 4000,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
@@ -40,7 +43,7 @@ var swiperOptions = {
       for (var i = 0; i < swiper.slides.length; i++) {
         swiper.slides[i].style.transition = speed + "ms";
         swiper.slides[i].querySelector(".headline").style.transition =
-          speed + "ms";
+          (speed * .85) + "ms";
         swiper.slides[i].querySelectorAll(".single-square").forEach(function(square) {
           square.style.transition =
             getRandomArbitrary(0, 2) + "s";
