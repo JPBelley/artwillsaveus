@@ -39,7 +39,7 @@ var swiperOptions = {
     },
     setTransition: function (speed) {
       var swiper = this;
-      console.log(swiper);
+
       for (var i = 0; i < swiper.slides.length; i++) {
         swiper.slides[i].style.transition = speed + "ms";
         swiper.slides[i].querySelector(".headline").style.transition =

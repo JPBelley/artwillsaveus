@@ -80,7 +80,11 @@
       background: rgba($white, 0.6);
       text-transform: uppercase;
       letter-spacing: 1px;
-      resize: none;
+      border-radius: 0;
+      -webkit-appearance: none;
+    }
+    textarea {
+        resize: none;
     }
 
     input:-webkit-autofill,
