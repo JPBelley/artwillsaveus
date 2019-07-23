@@ -17,3 +17,9 @@ var navScrollTop = function(selector, position) {
 
 
 navScrollTop($(window), navPosition);
+
+var burger = document.getElementById("burger");
+
+burger.addEventListener('click', function (e) {
+  this.classList.toggle('open');
+}, false);

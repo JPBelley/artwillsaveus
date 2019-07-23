@@ -40,3 +40,87 @@ nav {
     width: 95%;
   }
 }
+
+// Burger menu
+#burger {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  top: 30px;
+  right: 30px;
+  text-align: right;
+  transition: 0.25s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  span {
+    display: block;
+    height: 2px;
+    width: 20px;
+    background-color: #000;
+    top: 0px;
+    position: absolute;
+
+    &.closed-line {
+      right: 0;
+      transition: 0.5s;
+    }
+    &.closed-line.second {
+      transition-delay: 0.2s;
+      width: 30px;
+      top: 7px;
+    }
+
+    &.opened-line {
+      background: transparent;
+      top: 30%;
+      left: 0;
+      width: 30px;
+      transform: rotate(45deg);
+      transition: 1s;
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 0px;
+        left: 0;
+        background-color: #000;
+        transition: 0.5s 0s;
+      }
+
+      &.second {
+        transform: rotate(315deg);
+      }
+    }
+  }
+
+  &.open {
+
+    .closed-line {
+      width: 0;
+
+      &.second {
+        width: 0;
+      }
+    }
+
+    .opened-line {
+
+      &::after {
+        width: 30px;
+        transition: 0.5s 0.3s;
+      }
+
+      &.second {
+
+        &::after {
+          transition-delay: 0.5s;
+        }
+      }
+    }
+  }
+}
