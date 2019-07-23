@@ -34,3 +34,28 @@ $('a[href*="#"]')
       }
     }
   });
+
+window.addEventListener("load", function () {
+  this.setTimeout(function() {
+    var bodyDOM = document.querySelector('body');
+    var backgroundLoader = document.querySelector('.background-loader');
+
+    bodyDOM.classList.remove('no-scroll');
+    backgroundLoader.classList.remove('visible');
+  }, 5000)
+});
+
+var spanText = function spanText(text) {
+  var string = text.innerText;
+  var spaned = '';
+  for (var i = 0; i < string.length; i++) {
+    if (string.substring(i, i + 1) === ' ') spaned += string.substring(i, i + 1);
+    else spaned += '<span>' + string.substring(i, i + 1) + '</span>';
+  }
+  text.innerHTML = spaned;
+}
+
+
+var loadingText = document.querySelector(".loading");
+
+spanText(loadingText);

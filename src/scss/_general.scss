@@ -146,3 +146,12 @@ h1:hover::after {
     transform: rotate(315deg);
   }
 }
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
