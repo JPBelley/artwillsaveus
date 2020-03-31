@@ -42,7 +42,7 @@ window.addEventListener("load", function () {
 
     bodyDOM.classList.remove('no-scroll');
     backgroundLoader.classList.remove('visible');
-  }, 5000)
+  }, 3000)
 });
 
 var spanText = function spanText(text) {
