@@ -23,6 +23,7 @@ nav {
     margin: 0 15px;
     font-size: 13px;
     position: relative;
+    white-space: nowrap;
 
     &::after {
       content: "";
